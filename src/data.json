@@ -1,0 +1,193 @@
+{
+  "data": {
+    "category": {
+      "products": [
+        {
+          "id": "huarache-x-stussy-le",
+          "name": "Nike Air Huarache Le",
+          "prices": [
+            {
+              "amount": 144.69
+            },
+            {
+              "amount": 104
+            },
+            {
+              "amount": 186.65
+            },
+            {
+              "amount": 15625.24
+            },
+            {
+              "amount": 10941.76
+            }
+          ]
+        },
+        {
+          "id": "jacket-canada-goosee",
+          "name": "Jacket",
+          "prices": [
+            {
+              "amount": 518.47
+            },
+            {
+              "amount": 372.67
+            },
+            {
+              "amount": 668.83
+            },
+            {
+              "amount": 55990.46
+            },
+            {
+              "amount": 39207.96
+            }
+          ]
+        },
+        {
+          "id": "ps-5",
+          "name": "PlayStation 5",
+          "prices": [
+            {
+              "amount": 844.02
+            },
+            {
+              "amount": 606.67
+            },
+            {
+              "amount": 1088.79
+            },
+            {
+              "amount": 91147.25
+            },
+            {
+              "amount": 63826.91
+            }
+          ]
+        },
+        {
+          "id": "xbox-series-s",
+          "name": "Xbox Series S 512GB",
+          "prices": [
+            {
+              "amount": 333.99
+            },
+            {
+              "amount": 240.07
+            },
+            {
+              "amount": 430.85
+            },
+            {
+              "amount": 36068.27
+            },
+            {
+              "amount": 25257.22
+            }
+          ]
+        },
+        {
+          "id": "apple-imac-2021",
+          "name": "iMac 2021",
+          "prices": [
+            {
+              "amount": 1688.03
+            },
+            {
+              "amount": 1213.34
+            },
+            {
+              "amount": 2177.57
+            },
+            {
+              "amount": 182294.51
+            },
+            {
+              "amount": 127653.82
+            }
+          ]
+        },
+        {
+          "id": "apple-iphone-12-pro",
+          "name": "iPhone 12 Pro",
+          "prices": [
+            {
+              "amount": 1000.76
+            },
+            {
+              "amount": 719.34
+            },
+            {
+              "amount": 1290.99
+            },
+            {
+              "amount": 108074.6
+            },
+            {
+              "amount": 75680.48
+            }
+          ]
+        },
+        {
+          "id": "apple-airpods-pro",
+          "name": "AirPods Pro",
+          "prices": [
+            {
+              "amount": 300.23
+            },
+            {
+              "amount": 215.8
+            },
+            {
+              "amount": 387.3
+            },
+            {
+              "amount": 32422.38
+            },
+            {
+              "amount": 22704.14
+            }
+          ]
+        },
+        {
+          "id": "apple-airtag",
+          "name": "AirTag",
+          "prices": [
+            {
+              "amount": 120.57
+            },
+            {
+              "amount": 86.67
+            },
+            {
+              "amount": 155.54
+            },
+            {
+              "amount": 13021.04
+            },
+            {
+              "amount": 9118.13
+            }
+          ]
+        }
+      ],
+      "gallery": [
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_2_720x.jpg?v=1612816087",
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_1_720x.jpg?v=1612816087",
+        "https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016105/product-image/2409L_61.jpg",
+        "https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016107/product-image/2409L_61_a.jpg",
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_4_720x.jpg?v=1612816087",
+        "https://images-na.ssl-images-amazon.com/images/I/51iPoFwQT3L._SL1230_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/61qbqFcvoNL._SL1500_.jpg",
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_3_720x.jpg?v=1612816087",
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_5_720x.jpg?v=1612816087",
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_4_720x.jpg?v=1612816087",
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_2_720x.jpg?v=1612816087",
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_1_720x.jpg?v=1612816087",
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_3_720x.jpg?v=1612816087",
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_5_720x.jpg?v=1612816087",
+        "https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_4_720x.jpg?v=1612816087"
+      ]
+    }
+  }
+}

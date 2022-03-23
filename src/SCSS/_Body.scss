@@ -1,0 +1,35 @@
+.container {
+  z-index: 1;
+  @include SecMargin();
+  margin-inline: auto;
+  //   margin-top: ;
+  max-width: 100rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  &__category-name {
+    margin-bottom: 10rem;
+    h1 {
+      @include fontStyle(4.2rem, 400, 6.7rem);
+    }
+  }
+  &__card-list {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    &__containercard {
+      // border: solid 2px rgba(126, 60, 226, 0.646);
+      // background-color: rgba(70, 230, 75, 0.578);
+      @include flexCenter(column);
+      align-items: flex-start;
+      //   gap: 1.6rem;
+      & > * {
+        padding: 1.6rem;
+      }
+
+      &-card-header {
+        padding-top: 0.6rem;
+      }
+    }
+  }
+}

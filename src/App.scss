@@ -1,0 +1,28 @@
+@import "SCSS/index";
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: $fonts;
+}
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  line-height: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: $fontColor;
+  line-height: 1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
