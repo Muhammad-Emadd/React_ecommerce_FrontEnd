@@ -1,0 +1,20 @@
+.currenciesPanel {
+  padding: 2rem;
+
+  @include flexCenter(column);
+  background-color: white;
+  gap: 2rem;
+  align-items: stretch;
+  filter: drop-shadow(0px 4px 35px rgba(168, 172, 176, 0.19));
+  position: absolute;
+  top: 6.5rem;
+  left: calc(100% - clamp(11.5rem, 11.4rem, 9rem));
+  width: clamp(11.5rem, 11.4rem, 9rem);
+  justify-content: stretch;
+  justify-items: stretch;
+  justify-content: center;
+  &__curriencies-name {
+    @include fontStyle(1.8rem, 500, 3rem);
+    cursor: pointer;
+  }
+}

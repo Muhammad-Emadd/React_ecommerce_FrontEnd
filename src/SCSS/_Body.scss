@@ -7,10 +7,12 @@
   display: grid;
   justify-content: center;
   align-items: center;
+  padding-inline: 10em;
   &__category-name {
     margin-bottom: 10rem;
     h1 {
       @include fontStyle(4.2rem, 400, 6.7rem);
+      text-transform: capitalize;
     }
   }
   &__card-list {
@@ -18,17 +20,31 @@
     gap: 4rem;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     &__containercard {
-      // border: solid 2px rgba(126, 60, 226, 0.646);
-      // background-color: rgba(70, 230, 75, 0.578);
       @include flexCenter(column);
-      align-items: flex-start;
+      align-items: stretch;
       //   gap: 1.6rem;
+
       & > * {
         padding: 1.6rem;
       }
 
       &-card-header {
+        position: relative;
         padding-top: 0.6rem;
+
+        & .cart-icon {
+          display: none;
+          position: absolute;
+          background-color: $greenColor;
+          border-radius: 50%;
+          padding: 0;
+          right: 3rem;
+          top: -4rem;
+          & img {
+            max-width: 2rem;
+            padding: 1.4rem;
+          }
+        }
       }
     }
   }

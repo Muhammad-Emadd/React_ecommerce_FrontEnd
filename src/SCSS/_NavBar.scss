@@ -1,18 +1,17 @@
 .navbar {
+  min-height: 8.7rem;
+  position: relative;
   @include flexCenter(row);
   margin: 0 auto 8em;
   max-width: 100rem;
   justify-items: stretch;
   align-items: stretch;
-  // height: 8rem;
 
   width: 100%;
   top: 0;
   margin-right: auto;
-  // left: 0;
-  z-index: 2;
 
-  // width: 90rem;
+  z-index: 2;
 
   &__categories {
     @include flexCenter(row);
@@ -32,14 +31,19 @@
   }
 
   &__actions {
+    // position: relative;
     @include flexCenter(row);
     gap: 1em;
 
     &-currClosed {
-      width: 100%;
+      & img {
+        width: 100%;
+      }
     }
     &-blackCart {
-      width: 20px;
+      & img {
+        width: 20px;
+      }
     }
   }
 }
@@ -50,9 +54,9 @@
   display: none;
   width: clamp(30rem, 27rem, 25rem);
   text-align: start;
-  position: fixed;
-  top: 4.4rem;
-  right: 10rem;
+  position: absolute;
+  top: 8.7rem;
+  left: calc(100% - clamp(30rem, 27rem, 25rem));
   background-color: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   border-radius: 2px;

@@ -1,5 +1,8 @@
 import React, { PureComponent } from "react";
-import Categories from "./Categories";
+import { Categories2 } from "./Categories";
+
+// import Categories from "./Categories";
+import CurrenciesPanel from "./CurrienciesPanel";
 import { logo, blackCart, currClosed, currOpened } from "./imports";
 
 const miniMenue = () => {
@@ -75,25 +78,25 @@ export class NavBar extends PureComponent {
     return (
       <div className="navbar">
         <div className="navbar__categories">
-          <Categories />
+          <Categories2 />
         </div>
         <div className="navbar__logo">
           <img className="navbar__logo-img" src={logo} alt="logo" />
         </div>
 
-        <div className="navbar__actions">
-          <img
-            className="navbar__actions-currClosed"
-            src={currClosed}
-            alt="currClosed"
-          />
-          <img
-            className="navbar__actions-blackCart"
-            src={blackCart}
-            alt="blackCart"
-          />
+        <div className="currenciesPanel">
+          <CurrenciesPanel />
         </div>
         {miniMenue()}
+        <div className="navbar__actions">
+          <div className="navbar__actions-currClosed">
+            <img src={currClosed} alt="currClosed" />
+          </div>
+
+          <div className="navbar__actions-blackCart">
+            <img src={blackCart} alt="blackCart" />
+          </div>
+        </div>
       </div>
     );
   }

@@ -1,14 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 import App from "./App";
+import { Provider } from "jotai";
 
-import { Provider } from "react-redux";
-import store from "./redux/store";
+const queryCliet = new QueryClient();
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <React.StrictMode>
+    <QueryClientProvider client={queryCliet}>
+      <Provider>
+        <BrowserRouter>
+          <React.Suspense fallback={<div>Loading ....</div>}>
+            <App />
+          </React.Suspense>
+          <ReactQueryDevtools initialIsOpen={true} />
+        </BrowserRouter>
+      </Provider>
+    </QueryClientProvider>
+  </React.StrictMode>,
+
   document.getElementById("root")
 );

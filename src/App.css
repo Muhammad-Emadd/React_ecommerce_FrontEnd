@@ -24,7 +24,19 @@
      object-position: 0 0;
 }
 
+.cart-btn-hover {
+  -webkit-filter: drop-shadow(0px 4px 11px rgba(29, 31, 34, 0.1));
+          filter: drop-shadow(0px 4px 11px rgba(29, 31, 34, 0.1));
+  background-color: white;
+}
+
+.display {
+  display: block !important;
+}
+
 .navbar {
+  min-height: 8.7rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,11 +128,11 @@
   gap: 1em;
 }
 
-.navbar__actions-currClosed {
+.navbar__actions-currClosed img {
   width: 100%;
 }
 
-.navbar__actions-blackCart {
+.navbar__actions-blackCart img {
   width: 20px;
 }
 
@@ -128,9 +140,9 @@
   display: none;
   width: clamp(30rem, 27rem, 25rem);
   text-align: start;
-  position: fixed;
-  top: 4.4rem;
-  right: 10rem;
+  position: absolute;
+  top: 8.7rem;
+  left: calc(100% - clamp(30rem, 27rem, 25rem));
   background-color: white;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
@@ -359,6 +371,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-inline: 10em;
 }
 
 .container__category-name {
@@ -371,6 +384,7 @@
   font-size: 4.2rem;
   line-height: 6.7rem;
   position: relative;
+  text-transform: capitalize;
 }
 
 .container__card-list {
@@ -395,9 +409,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .container__card-list__containercard > * {
@@ -405,7 +419,23 @@
 }
 
 .container__card-list__containercard-card-header {
+  position: relative;
   padding-top: 0.6rem;
+}
+
+.container__card-list__containercard-card-header .cart-icon {
+  display: none;
+  position: absolute;
+  background-color: #5ece7b;
+  border-radius: 50%;
+  padding: 0;
+  right: 3rem;
+  top: -4rem;
+}
+
+.container__card-list__containercard-card-header .cart-icon img {
+  max-width: 2rem;
+  padding: 1.4rem;
 }
 
 .product-page {
@@ -581,6 +611,50 @@
   width: 100%;
   background: #5ece7b;
   color: white;
+  cursor: pointer;
+}
+
+.currenciesPanel {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  gap: 2rem;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-filter: drop-shadow(0px 4px 35px rgba(168, 172, 176, 0.19));
+          filter: drop-shadow(0px 4px 35px rgba(168, 172, 176, 0.19));
+  position: absolute;
+  top: 6.5rem;
+  left: calc(100% - clamp(11.5rem, 11.4rem, 9rem));
+  width: clamp(11.5rem, 11.4rem, 9rem);
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  justify-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.currenciesPanel__curriencies-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  position: relative;
   cursor: pointer;
 }
 

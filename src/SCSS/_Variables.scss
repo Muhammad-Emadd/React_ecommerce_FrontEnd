@@ -48,10 +48,17 @@ $fonts: "Raleway", sans-serif, source-code-pro, Consolas, "Courier New",
 }
 
 .img {
-  // padding-left: 1.6rem;
   max-width: 100%;
   max-height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: 0 0;
+}
+
+.cart-btn-hover {
+  filter: drop-shadow(0px 4px 11px rgba(29, 31, 34, 0.1));
+  background-color: white;
+}
+.display {
+  display: block !important;
 }

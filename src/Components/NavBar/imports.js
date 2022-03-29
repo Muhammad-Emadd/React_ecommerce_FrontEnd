@@ -2,5 +2,6 @@ import logo from "../../assets/logo.svg";
 import blackCart from "../../assets/blackCart.svg";
 import currOpened from "../../assets/currOpened.svg";
 import currClosed from "../../assets/currClosed.svg";
+import whiteCart from "../../assets/EmptyCart.svg";
 
-export { logo, blackCart, currClosed, currOpened };
+export { logo, blackCart, currClosed, currOpened, whiteCart };
