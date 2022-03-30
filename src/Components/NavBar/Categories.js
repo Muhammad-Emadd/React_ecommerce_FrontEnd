@@ -1,9 +1,9 @@
 import { useQuery } from "react-query";
 import React, { Component } from "react";
-import { getData } from "../try/api";
+import { getData } from "../../jotai/helpers";
 import { GET_CATEGORIES } from "../../GraphQL/Queries";
 import { useAtom } from "jotai";
-import { categoryAtom } from "../try/Atoms";
+import { categoryAtom } from "../../jotai/Atoms";
 
 export const Categories2 = () => {
   const [category, categorySet] = useAtom(categoryAtom);

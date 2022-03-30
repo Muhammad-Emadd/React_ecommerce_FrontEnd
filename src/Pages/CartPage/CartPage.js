@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "../../Containers/NavBar/NavBar";
 
 export class CartPage extends Component {
   render() {

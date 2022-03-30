@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import React, { Component } from "react";
-import { categoryAtom } from "../try/Atoms";
-import { ProductsCards } from "./Products";
+import { categoryAtom } from "../../jotai/Atoms";
+import { ProductsCards } from "../../Components/Products/Products";
 
 export const BodyFn = () => {
   const [category] = useAtom(categoryAtom);

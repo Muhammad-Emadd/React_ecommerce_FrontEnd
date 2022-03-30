@@ -429,8 +429,19 @@
   background-color: #5ece7b;
   border-radius: 50%;
   padding: 0;
+  cursor: pointer;
   right: 3rem;
   top: -4rem;
+  cursor: pointer;
+  -webkit-transition: all 0.18s;
+  transition: all 0.18s;
+}
+
+.container__card-list__containercard-card-header .cart-icon:active {
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+  -webkit-box-shadow: 0 1rem 0.5rem rgba(141, 143, 154, 0.2);
+          box-shadow: 0 1rem 0.5rem rgba(141, 143, 154, 0.2);
 }
 
 .container__card-list__containercard-card-header .cart-icon img {

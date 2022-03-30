@@ -1,15 +1,34 @@
 import React, { Component } from "react";
-import { getData, Query } from "../try/api";
-import { CURRENCIES_LABEL } from "../../GraphQL/Queries";
+import { currAtom, defaultCurrAtom, getcurrencyAtom } from "../../jotai/Atoms";
+import { useAtom } from "jotai";
 
-export class CurrenciesPanel extends Component {
+export const CurrenciesPanel = () => {
+  const [currenciesList] = useAtom(getcurrencyAtom);
+  const [curr, currSet] = useAtom(currAtom);
+  console.log(currenciesList);
+
+  return (
+    <>
+      <CurrenciesPanelClass
+        curr={curr}
+        currSet={currSet}
+        currenciesList={currenciesList}
+      />
+    </>
+  );
+};
+
+export class CurrenciesPanelClass extends Component {
   onClickTry = (e) => {
-    console.log(e.target.id);
+    this.props.currSet(e.target.id.toUpperCase());
+    console.log(e.target.id.toUpperCase());
   };
-  handledata = (data) => {
-    console.log(data);
 
-    return data.currencies.map((objCurrency, i) => {
+  render() {
+    const { currenciesList } = this.props;
+    console.log(currenciesList);
+
+    return currenciesList.currencies.map((objCurrency, i) => {
       return (
         <h3
           key={i}
@@ -21,17 +40,5 @@ export class CurrenciesPanel extends Component {
         </h3>
       );
     });
-  };
-  displayCategories = ({ data, isLoading }) => {
-    return isLoading ? <h1>Loading</h1> : this.handledata(data);
-  };
-  render() {
-    return (
-      <Query keyName="example3" fn={() => getData(CURRENCIES_LABEL)}>
-        {this.displayCategories}
-      </Query>
-    );
   }
 }
-
-export default CurrenciesPanel;

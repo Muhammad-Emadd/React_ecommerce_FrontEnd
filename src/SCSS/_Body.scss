@@ -38,8 +38,16 @@
           background-color: $greenColor;
           border-radius: 50%;
           padding: 0;
+          cursor: pointer;
           right: 3rem;
           top: -4rem;
+          cursor: pointer;
+          transition: all 0.18s;
+
+          &:active {
+            transform: translateY(-5%);
+            box-shadow: 0 1rem 0.5rem rgba(141, 143, 154, 0.2);
+          }
           & img {
             max-width: 2rem;
             padding: 1.4rem;
@@ -49,3 +57,19 @@
     }
   }
 }
+// .btn__workout {
+//   font-weight: 600;
+//   color: #e2e2e2;
+//   padding: 0.2rem 1rem;
+//   border-radius: 10rem;
+//   border-color: transparent;
+//   cursor: pointer;
+//   border: none;
+
+//   transition: all 0.18s;
+//   box-shadow: 0 1.75rem 3.5rem rgb(0 0 0 / 10%);
+// }
+// .btn__workout:active {
+//   transform: translateY(10%);
+//   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+// }

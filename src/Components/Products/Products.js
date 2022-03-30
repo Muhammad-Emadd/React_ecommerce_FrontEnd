@@ -1,30 +1,33 @@
 import React, { Component } from "react";
 import { useAtom } from "jotai";
-import { getProductsList } from "../try/Atoms";
-import { whiteCart } from "../NavBar/imports";
+import { getProductsList, choosedCurrAtom } from "../../jotai/Atoms";
+import { whiteCart } from "../../Containers/NavBar/imports";
 
 export const ProductsCards = () => {
-  const [data] = useAtom(getProductsList);
+  const [ProductsList] = useAtom(getProductsList);
+  const [choosedCurr] = useAtom(choosedCurrAtom);
+  console.log(choosedCurr);
+
   return (
     <>
-      <ProductsUI productsList={data} />
+      <ProductsUI choosedCurr={choosedCurr} productsList={ProductsList} />
     </>
   );
 };
 
 class ProductsUI extends Component {
   hoverEffects = (e) => {
-    e.target
-      .closest(".container__card-list__containercard")
-      .querySelector(".cart-icon")
-      .classList.toggle("display");
+    const cardContainer = e.target.closest(
+      ".container__card-list__containercard"
+    );
 
-    e.target
-      .closest(".container__card-list__containercard")
-      .classList.toggle("cart-btn-hover");
+    cardContainer.querySelector(".cart-icon").classList.toggle("display");
+    cardContainer.classList.toggle("cart-btn-hover");
   };
-  displayProductsUI = () => {
+
+  render() {
     const { products } = this.props.productsList.category;
+    const { symbol } = this.props.choosedCurr;
 
     return products.map((product, i) => {
       const { id, name, gallery } = product;
@@ -42,7 +45,7 @@ class ProductsUI extends Component {
           <header className="container__card-list__containercard-card-header">
             <h1>{name}</h1>
             <p>
-              {product.prices[0].currency.symbol} {product.prices[0].amount}
+              {symbol} {product.prices[0].amount}
             </p>
             <div className="cart-icon">
               <img src={whiteCart} alt="cart" />
@@ -51,9 +54,5 @@ class ProductsUI extends Component {
         </div>
       );
     });
-  };
-
-  render() {
-    return this.displayProductsUI();
   }
 }

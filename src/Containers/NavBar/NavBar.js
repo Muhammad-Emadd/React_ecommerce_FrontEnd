@@ -1,8 +1,8 @@
 import React, { PureComponent } from "react";
-import { Categories2 } from "./Categories";
+import { Categories2 } from "../../Components/NavBar/Categories";
 
 // import Categories from "./Categories";
-import CurrenciesPanel from "./CurrienciesPanel";
+import { CurrenciesPanel } from "../../Components/NavBar/CurrienciesPanel";
 import { logo, blackCart, currClosed, currOpened } from "./imports";
 
 const miniMenue = () => {
