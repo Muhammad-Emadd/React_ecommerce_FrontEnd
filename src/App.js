@@ -1,36 +1,27 @@
 import React, { Component } from "react";
-import "./App.css";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import ProductPage from "./Pages/ProductPage/ProductPage";
 import NavBar from "./Containers/NavBar/NavBar";
+import { Main } from "./Pages/Main/Main";
+import CartPage from "./Pages/CartPage/CartPage";
 
-// import NavBar from "./Containers/NavBar/NavBar";
-import { BodyFn } from "./Containers/Body/Body";
-// import Trash from "./Components/try/trash";
-// import Trash0 from "./Components/try/Trash0";
-// import Trash2 from "./Components/try/Trash2";
-// import Body, { BodyFn } from "./Components/Body/Body";
-// import CartPage from "./Components/CartPage/CartPage";
-// import { CATEGORIES } from "./GraphQL/Queries";
+import "./App.css";
 
 export class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Trash0 /> */}
-        <NavBar />
-        <BodyFn />
-        {/* <Route exact path="/" component={}/>
-      <Route path="/" component={}/>
-      <Route path="/CartPage" component={}/> */}
-        {/* <CartPage />; */}
+        <React.Suspense fallback={<div className="spinner"></div>}>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/Products/:id" element={<ProductPage />} />
+          </Routes>
+        </React.Suspense>
       </div>
     );
   }
 }
 
-{
-  /* 
-<Trash2 />
-<Body /> */
-}
 export default App;

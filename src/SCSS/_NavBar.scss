@@ -1,161 +1,108 @@
 .navbar {
   min-height: 8.7rem;
   position: relative;
-  @include flexCenter(row);
+  @include flex(row, space-between, stretch);
   margin: 0 auto 8em;
   max-width: 100rem;
   justify-items: stretch;
-  align-items: stretch;
-
   width: 100%;
   top: 0;
-  margin-right: auto;
-
-  z-index: 2;
+  margin-inline: auto;
+  z-index: 200;
 
   &__categories {
-    @include flexCenter(row);
+    @include flex(row, space-between, stretch);
     gap: 1.6rem;
-    align-items: stretch;
 
     &-name {
       @include fontStyle(1.6rem, 600, 2rem);
       align-self: center;
-      cursor: pointer;
+      @include pionter();
       padding: 3rem 0;
     }
   }
 
   &__logo {
     @include flexCenter(row);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &__actions {
-    // position: relative;
     @include flexCenter(row);
     gap: 1em;
 
-    &-currClosed {
-      & img {
-        width: 100%;
+    &-currency {
+      @include flex(row, space-between, center);
+      @include pionter();
+      transition: all 2s ease;
+
+      &-sign {
+        @include fontStyle(1.8rem, 500, 3rem);
+      }
+      & .arrow {
+        width: 1.25rem;
+        height: 1.25rem;
+        display: inline-block;
+        position: relative;
+        margin: 0 0.8rem;
+
+        span {
+          top: 0.6rem;
+          position: absolute;
+          width: 0.75rem;
+          height: 0.1rem;
+          background-color: black;
+          display: inline-block;
+          transition: all 0.2s ease;
+          transform: translateY(-50%);
+
+          &:first-of-type {
+            left: 0;
+            transform: rotate(45deg);
+          }
+          &:last-of-type {
+            right: 0;
+            transform: rotate(-45deg);
+          }
+        }
+        &.active {
+          span {
+            &:first-of-type {
+              transform: rotate(-45deg);
+            }
+
+            &:last-of-type {
+              transform: rotate(45deg);
+            }
+          }
+        }
       }
     }
+
     &-blackCart {
+      @include pionter();
+      @include flexCenter(row);
+      position: relative;
+
+      & sup {
+        @include fontStyle(1rem, 400, 1rem);
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 0.3em 0.5em;
+        color: white;
+        background: black;
+      }
       & img {
         width: 20px;
+        flex: 1;
+        margin-right: 10px;
       }
     }
   }
 }
-
-//  cart__cart-menue-card1__size-buttons
-
-.cart {
-  display: none;
-  width: clamp(30rem, 27rem, 25rem);
-  text-align: start;
-  position: absolute;
-  top: 8.7rem;
-  left: calc(100% - clamp(30rem, 27rem, 25rem));
-  background-color: white;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
-  padding: 1.6rem;
-  //
-  z-index: 2;
-  // display: none;
-
-  &__header {
-    margin: 1.5rem 0;
-  }
-
-  &__product {
-    @include flexCenter(column);
-    gap: 4rem;
-    margin: 2.5rem 0;
-
-    &-cart__cart-menu {
-      gap: 1rem;
-      display: grid;
-      justify-items: stretch;
-      justify-content: center;
-
-      grid-template-columns: 1fr 0.2fr 0.7fr;
-
-      &__card1 {
-        @include flexCenter(column);
-        align-items: flex-start;
-        justify-content: space-around;
-        & h3 {
-          @include fontStyle(1.6rem, 300, 2.5rem);
-        }
-        & p {
-          @include fontStyle(1.6rem, 500, 2.5rem);
-        }
-        &__size-btn {
-          @include flexCenter(row);
-          gap: 1rem;
-          & p {
-            padding: 0.1rem 0.6rem;
-            border: 1px solid $fontColor;
-            aspect-ratio: 1/1;
-            cursor: pointer;
-
-            @include fontStyle(1.4rem, 400, 2.2rem);
-          }
-          & p:nth-child(2) {
-            border: 1px solid $btnColorLight;
-            background-color: lighten($btnColorLight, $amount: 25);
-            color: $btnColorLight;
-          }
-        }
-      }
-
-      &__pieces-btn {
-        @include flexCenter(column);
-
-        & p {
-          padding: 0.1rem;
-
-          aspect-ratio: 1/1;
-          text-align: center;
-          @include fontStyle(1.6rem, 500, 2.5rem);
-
-          &:nth-child(odd) {
-            border: 1px solid $fontColor;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
-
-  &__amount {
-    @include flexCenter(row);
-    margin: 1.5rem 0;
-    & h2 {
-      @include fontStyle(1.6rem, 500, 1.8rem);
-    }
-    & p {
-      @include fontStyle(1.6rem, 700, 2.5em);
-    }
-  }
-  &__btns {
-    @include flexCenter(row);
-    & p {
-      padding: 1.6rem 3.2rem;
-      color: white;
-      background: $greenColor;
-      @include fontStyle(1.4rem, 600, 1.6rem);
-      border: solid 1px $greenColor;
-      cursor: pointer;
-    }
-    & p:nth-child(1) {
-      padding: 1.6rem 3.2rem;
-      color: $fontColor;
-      background: white;
-      border: solid 1px;
-    }
-  }
-}
-// cart__cart-menu__product-cart__cart-menu_pieces-btn

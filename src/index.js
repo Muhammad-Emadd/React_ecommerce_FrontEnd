@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
+
 import App from "./App";
 import { Provider } from "jotai";
 
@@ -13,10 +13,7 @@ ReactDOM.render(
     <QueryClientProvider client={queryCliet}>
       <Provider>
         <BrowserRouter>
-          <React.Suspense fallback={<div>Loading ....</div>}>
-            <App />
-          </React.Suspense>
-          <ReactQueryDevtools initialIsOpen={true} />
+          <App />
         </BrowserRouter>
       </Provider>
     </QueryClientProvider>

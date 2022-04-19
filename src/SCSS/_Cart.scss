@@ -1,0 +1,137 @@
+.ccart {
+  font-size: 100%;
+
+  text-align: start;
+  margin-inline: auto;
+  max-width: 100rem;
+  background-color: white;
+
+  &__header {
+    padding-inline: 0.4em;
+    margin-bottom: 6rem;
+    & h2 {
+      @include fontStyle(3.2rem, 700, 4rem);
+    }
+  }
+
+  &__product {
+    @include flexCenter(column);
+
+    &-cart__cart-menu {
+      position: relative;
+      border-top: 1px solid #e5e5e5;
+      padding: 2rem 0;
+      gap: 1rem;
+      width: 100rem;
+      min-width: 30rem;
+      display: grid;
+      grid-template-columns: 1fr 0.2fr 0.7fr;
+      &:hover {
+        filter: drop-shadow(0px 4px 10px rgba(168, 172, 176, 0.19));
+        background-color: white;
+      }
+
+      &__card1 {
+        align-self: center;
+        justify-self: left;
+        & h3 {
+          @include fontStyle(3rem, 600, 2.7rem);
+          margin-bottom: 1.6rem;
+        }
+        & p {
+          @include fontStyle(2.4rem, 500, 1.8rem);
+          margin: 1.2rem 0 2.4rem;
+        }
+        &__attributes {
+          @include flexCenter(column);
+          gap: 2.4rem;
+
+          &-swatch__items {
+            @extend .container__card-list__containercard-back__all-attr-swatch__items;
+            border: 1px solid rgba(204, 204, 204, 0.2);
+            width: 100%;
+            margin: 0;
+            & legend {
+              @include fontStyle(1.2rem, 400, 1rem);
+              text-align: left;
+            }
+            & span {
+              margin: 0 0.5em;
+              width: 1.5em;
+              height: 1.5em;
+            }
+          }
+
+          &-text__items {
+            @extend .container__card-list__containercard-back__all-attr-text__items;
+            width: 100%;
+            border: 1px solid rgba(204, 204, 204, 0.2);
+            & label {
+              margin-top: 1em;
+            }
+            & legend {
+              text-align: left;
+              @include fontStyle(1.2rem, 400, 1rem);
+            }
+
+            margin: 0;
+          }
+        }
+      }
+
+      &__pieces-btn {
+        @include flexCenter(column);
+        justify-content: space-around;
+
+        & p {
+          @include fontStyle(1.6rem, 500, 1rem);
+          @include pionter();
+          padding: 0.5rem;
+          text-align: center;
+
+          &:nth-child(odd) {
+            border: 1px solid $fontColor;
+          }
+        }
+      }
+      & img {
+        justify-self: center;
+        align-self: center;
+      }
+    }
+  }
+
+  &__amount {
+    padding-inline: 0.4em;
+    @include flexCenter(row);
+    margin: 1.5rem 0;
+    align-items: center;
+    justify-content: space-between;
+    & h2 {
+      @include fontStyle(2.4rem, 500, 1.8rem);
+    }
+    & p {
+      @include fontStyle(2rem, 700, 2.5em);
+    }
+  }
+  &__btns {
+    padding: 0.4em;
+    margin-bottom: 1.6em;
+    @include flexCenter(row);
+    & p {
+      padding: 1.6rem 3.2rem;
+      color: white;
+      background: $greenColor;
+      @include fontStyle(1.4rem, 600, 1.6rem);
+      border: solid 1px white;
+      @include pionter();
+    }
+    & p:nth-child(1) {
+      color: $fontColor;
+      border: solid 1px black;
+
+      background: white;
+      border-color: black;
+    }
+  }
+}

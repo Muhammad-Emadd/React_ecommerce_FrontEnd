@@ -1,0 +1,30 @@
+.product-counter {
+  @include flexCenter(row);
+  justify-content: space-between;
+  width: 70%;
+  align-items: center;
+  margin: 1.5em auto;
+  & p {
+    width: 2.5rem;
+    @include fontStyle(2.5rem, 400, 2.5rem);
+    text-align: center;
+    /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    &:nth-child(odd) {
+      border: 1px solid $fontColor;
+      @include pionter();
+      border-radius: 50%;
+    }
+
+    &:nth-child(odd):active {
+      background-color: rgba(black, 0.7);
+      color: white;
+      transform: scale(0.9);
+      box-shadow: 0 1rem 0.5rem rgba(141, 143, 154, 0.2);
+    }
+  }
+}

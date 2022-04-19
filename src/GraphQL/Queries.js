@@ -50,3 +50,31 @@ export const CURRENCIES_LABEL = `{
       }
   }
 `;
+
+export const getCardDetails = (something) => {
+  return ` {
+    product(id: "${something}") {
+      id
+      name
+      inStock
+      gallery
+      description
+      prices {
+        currency {
+          label
+        }
+        amount
+      }
+      attributes {
+        id
+        name
+        type
+        items {
+          displayValue
+          id
+          value
+        }
+      }
+    }
+  }`;
+};
