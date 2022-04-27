@@ -1,6 +1,6 @@
 import { useAtom } from "jotai";
 import React, { Component } from "react";
-import { setTotalAtom, totalAtom } from "../Jotai/Atoms";
+import { setTotalAtom, totalAtom } from "../jotaiStore/Atoms";
 
 export function Counter({ countAtom, price, id }) {
   const [count, setCount] = useAtom(countAtom);
@@ -40,7 +40,7 @@ class CounterClass extends Component {
   }
 
   render() {
-    const { count, setCount, id } = this.props;
+    const { count, setCount } = this.props;
 
     return (
       <>

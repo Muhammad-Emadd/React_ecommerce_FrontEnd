@@ -7,7 +7,7 @@ import {
   toggleDialogAtom,
   resetCountAtom,
   resetCheckedAttributesAtom,
-} from "../../Jotai/Atoms";
+} from "../../jotaiStore/Atoms";
 import ProductAttributes from "../../Components/ProductAttributes";
 
 export {

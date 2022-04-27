@@ -13,7 +13,7 @@ import {
   toggleCartModalAtom,
   toggleCurrencyMenuAtom,
   deleteFromCartAtom,
-} from "../../Jotai/Atoms";
+} from "../../jotaiStore/Atoms";
 
 export {
   blackCart,

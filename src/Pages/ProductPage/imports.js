@@ -9,7 +9,7 @@ import {
   readCheckedAttributesAtom,
   resetCheckedAttributesAtom,
   setCheckedAttributesAtom,
-} from "../../Jotai/Atoms";
+} from "../../jotaiStore/Atoms";
 
 export {
   choosedCurrAtom,

@@ -3,7 +3,7 @@ import {
   choosedCurrAtom,
   toggleDialogAtom,
   setIdAtom,
-} from "../../Jotai/Atoms";
+} from "../../jotaiStore/Atoms";
 import whiteCart from "../../Assets/whiteCart.svg";
 import ProductsCardsFront from "./ProductsCardsFront";
 

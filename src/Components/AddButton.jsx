@@ -10,7 +10,7 @@ import {
   setCartAtom,
   setCountsAtom,
   toggleDialogAtom,
-} from "../Jotai/Atoms";
+} from "../jotaiStore/Atoms";
 
 export function AddButton({ attributes }) {
   const [checkedAttributes] = useAtom(readCheckedAttributesAtom);

@@ -1,6 +1,11 @@
 import { useAtom } from "jotai";
 import React, { Component } from "react";
-import { countAtom, decAtom, incAtom, resetCountAtom } from "../Jotai/Atoms";
+import {
+  countAtom,
+  decAtom,
+  incAtom,
+  resetCountAtom,
+} from "../jotaiStore/Atoms";
 
 export function ProductCounter() {
   const [readcountAtom] = useAtom(countAtom);

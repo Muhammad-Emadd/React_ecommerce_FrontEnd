@@ -4,7 +4,7 @@ import {
   getCategoryAtom,
   readCategoryAtom,
   SetCategoryAtom,
-} from "../Jotai/Atoms";
+} from "../jotaiStore/Atoms";
 
 import { Link } from "react-router-dom";
 

@@ -9,7 +9,7 @@ import {
   countsAtom,
   readTotalAtom,
   deleteFromCartAtom,
-} from "../../Jotai/Atoms";
+} from "../../jotaiStore/Atoms";
 
 export {
   choosedCurrAtom,

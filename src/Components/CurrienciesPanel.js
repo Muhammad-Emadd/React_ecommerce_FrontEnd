@@ -5,7 +5,7 @@ import {
   SetCurrAtom,
   toggleCartModalAtom,
   toggleCurrencyMenuAtom,
-} from "../Jotai/Atoms";
+} from "../jotaiStore/Atoms";
 import { useAtom } from "jotai";
 
 export const CurrenciesPanel = () => {

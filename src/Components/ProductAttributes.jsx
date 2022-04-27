@@ -9,7 +9,7 @@ import {
   resetCheckedAttributesAtom,
   readCheckedAttributesAtom,
   chosenProductAtom,
-} from "../Jotai/Atoms";
+} from "../jotaiStore/Atoms";
 import AddButton from "./AddButton";
 import ProductCounter from "./ProductCounter";
 
@@ -43,7 +43,7 @@ class ProductAttributesClass extends Component {
   }
   onCheckingAttributes(e) {
     const { name, value } = e.target;
-    const { setCheckedAttributes, checkedAttributes } = this.props;
+    const { setCheckedAttributes } = this.props;
     setCheckedAttributes({ name, value });
   }
   componentDidMount() {
