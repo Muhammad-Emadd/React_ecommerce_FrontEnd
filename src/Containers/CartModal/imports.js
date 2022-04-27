@@ -2,7 +2,7 @@ import Counter from "../../Components/Counter";
 import Scroll from "../../Components/Scroll";
 import { getCardDetails } from "../../GraphQL/Queries";
 import { getData } from "../../Helpers/helpers";
-import blackCart from "../../Assets/blackCart.svg";
+import blackCart from "../../assets/blackCart.svg";
 import {
   setCartAtom,
   CartLengthAtom,

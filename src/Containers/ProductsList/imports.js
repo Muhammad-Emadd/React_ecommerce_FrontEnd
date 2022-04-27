@@ -4,7 +4,7 @@ import {
   toggleDialogAtom,
   setIdAtom,
 } from "../../jotaiStore/Atoms";
-import whiteCart from "../../Assets/whiteCart.svg";
+import whiteCart from "../../assets/whiteCart.svg";
 import ProductsCardsFront from "./ProductsCardsFront";
 
 export {

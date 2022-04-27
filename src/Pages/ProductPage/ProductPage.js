@@ -58,7 +58,7 @@ class ProductPageClass extends Component {
   };
   onCheckingAttributes(e) {
     const { name, value } = e.target;
-    const { setCheckedAttributes, checkedAttributes } = this.props;
+    const { setCheckedAttributes } = this.props;
     setCheckedAttributes({ name, value });
   }
 
@@ -73,7 +73,7 @@ class ProductPageClass extends Component {
     resetCheckedAttributes();
   }
   render() {
-    const { gallery, attributes, name, prices, id } = this.props;
+    const { gallery, attributes, name, prices } = this.props;
     const { symbol, label } = this.props.choosedCurr;
     const price = prices
       ? prices.filter((price) => {
