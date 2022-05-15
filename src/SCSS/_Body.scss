@@ -19,8 +19,7 @@
     gap: 4rem;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     &__containercard-front {
-      @include flexCenter(column);
-      align-items: stretch;
+      @include flex(column, space-between, stretch);
       position: relative;
 
       & > * {
@@ -101,26 +100,17 @@
       }
       & p.btn {
         position: absolute;
-        margin: 0;
-        border: 0;
-        padding: 0;
+
         background: transparent;
         border-radius: 50%;
         width: 40px;
         height: 40px;
         display: flex;
         right: 1.5em;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
         @include pionter();
         transition: all 150ms;
 
         .icon-cross {
-          margin: 0;
-          padding: 0;
-          border: 0;
-          background: none;
           position: relative;
           width: 35px;
           height: 35px;
@@ -165,7 +155,6 @@
             @include fontStyle(1.8rem, 500, 2.8rem);
           }
         }
-
         &-img {
           flex: 1;
         }
@@ -175,8 +164,7 @@
         gap: 1.5em;
         &-swatch {
           width: 100%;
-          @include flexCenter(column);
-          align-items: flex-start;
+          @include flex(column, space-between, flex-start);
           gap: 0.5em;
           &__items {
             border: 1px solid rgba(204, 204, 204, 0.6);
@@ -255,10 +243,10 @@
       }
 
       &__count {
-        @include flexCenter(row);
-        justify-content: space-between;
+        @include flex(row, space-between, center);
+
         width: 70%;
-        align-items: center;
+
         margin: 1.5em auto;
         & p {
           width: 2.5rem;

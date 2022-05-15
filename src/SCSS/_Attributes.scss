@@ -3,8 +3,8 @@
 
   &-swatch {
     width: 100%;
-    @include flexCenter(column);
-    align-items: flex-start;
+    @include flex(column, space-between, flex-start);
+
     gap: 0.5em;
     &__items {
       border: 1px solid rgba(204, 204, 204, 0.6);

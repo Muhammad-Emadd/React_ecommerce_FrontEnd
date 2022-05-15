@@ -80,8 +80,7 @@
       }
 
       &__pieces-btn {
-        @include flexCenter(column);
-        justify-content: space-around;
+        @include flex(column, space-around, center);
 
         & p {
           @include fontStyle(1.6rem, 500, 1rem);
@@ -103,10 +102,9 @@
 
   &__amount {
     padding-inline: 0.4em;
-    @include flexCenter(row);
+    @include flex(row, space-between, center);
     margin: 1.5rem 0;
-    align-items: center;
-    justify-content: space-between;
+
     & h2 {
       @include fontStyle(2.4rem, 500, 1.8rem);
     }

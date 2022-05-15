@@ -16,12 +16,14 @@ $fonts: "Raleway", sans-serif, source-code-pro, Consolas, "Courier New",
   align-items: center;
   flex-direction: $dir;
 }
+
 @mixin flex($dir, $justify, $align) {
   display: flex;
   flex-direction: $dir;
   justify-content: $justify;
   align-items: $align;
 }
+
 @mixin fontStyle($size, $Weight, $lineHeight: 1) {
   font-style: normal;
   font-weight: $Weight;

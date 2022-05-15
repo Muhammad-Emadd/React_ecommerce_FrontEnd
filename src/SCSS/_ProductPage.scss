@@ -1,16 +1,13 @@
 .product-page {
-  @include flexCenter(row);
-
+  @include flex(row, space-between, stretch);
   margin: 8rem auto;
   max-width: 100rem;
   gap: 4rem;
-  align-items: stretch;
   max-height: 51rem;
 
   &__images {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include flex(column, center, flex-start);
+
     gap: 2rem;
     aspect-ratio: 1/1;
     max-width: 10rem;
@@ -21,10 +18,8 @@
 
   &__product-info {
     flex: 1;
-    @include flexCenter(row);
-    align-items: stretch;
+    @include flex(row, center, stretch);
     flex-wrap: wrap;
-
     gap: 4rem;
     &__main-img {
       flex: 1;
@@ -37,9 +32,8 @@
       flex: 0.5;
       margin-inline: auto;
       max-width: 30rem;
-      @include flexCenter(column);
+      @include flex(column, space-between, stretch);
       flex-wrap: nowrap;
-      align-items: stretch;
       gap: 2rem;
       & h2 {
         @include fontStyle(3rem, 600, 2.7rem);
@@ -50,10 +44,7 @@
         }
         &-btns {
           margin-top: 00.8rem;
-          @include flexCenter(row);
-          align-items: center;
-          justify-content: space-between;
-          align-content: center;
+          @include flex(row, space-between, center);
 
           & p {
             @include fontStyle(1.6rem, 400, 4.5rem);
@@ -70,8 +61,7 @@
       }
 
       &__price {
-        @include flexCenter(row);
-        align-items: flex-start;
+        @include flex(row, space-between, flex-start);
         & p:nth-child(1) {
           @include fontStyle(1.8rem, 700, 1.8rem);
         }
