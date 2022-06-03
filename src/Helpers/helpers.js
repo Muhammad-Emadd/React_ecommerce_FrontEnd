@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import { atom } from "jotai";
-export const BASE_URL = "http://localhost:4000/";
+export const BASE_URL = "https://react-endpoint.herokuapp.com/";
 
 export function Query(props) {
   return props.children(useQuery(props.keyName, props.fn, props.options));
